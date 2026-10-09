@@ -1,0 +1,44 @@
+
+# Python virtual environment
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Node.js dependencies and build output
+frontend/node_modules/
+frontend/dist/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# MRI datasets and patient uploads
+data/
+backend/uploads/
+datasets/
+*.nii
+*.nii.gz
+
+# Generated patient reports and explainability outputs
+backend/reports/
+reports/
+*.pdf
+*.html
+
+# Local editor and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Python and application logs
+*.log
+
+# Temporary files
+*.tmp
+# Exclude unused training checkpoints and full-precision model
+backend/models/*.pth
+backend/models/unet_brain_tumor.onnx

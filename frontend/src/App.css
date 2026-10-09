@@ -1,0 +1,335 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  background: #f4f7fb;
+  color: #172033;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+
+/* HEADER */
+
+.header {
+  background: #101828;
+  color: white;
+  padding: 22px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.header p {
+  margin: 5px 0 0;
+  color: #b9c3d4;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.status-dot {
+  width: 9px;
+  height: 9px;
+  background: #22c55e;
+  border-radius: 50%;
+}
+
+
+/* MAIN */
+
+.main {
+  width: min(1100px, 90%);
+  margin: auto;
+  padding: 50px 0;
+}
+
+
+/* HERO */
+
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: auto;
+  color: #667085;
+  line-height: 1.7;
+}
+
+
+/* CARDS */
+
+.card {
+  background: white;
+  border: 1px solid #e4e7ec;
+  border-radius: 14px;
+  padding: 28px;
+  margin-bottom: 22px;
+  box-shadow: 0 4px 15px rgba(16, 24, 40, 0.04);
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.description {
+  color: #667085;
+}
+
+
+/* UPLOAD */
+
+.upload-area {
+  border: 2px dashed #cbd5e1;
+  border-radius: 12px;
+  padding: 35px;
+  text-align: center;
+  margin: 25px 0;
+  background: #f8fafc;
+}
+
+.selected-file {
+  margin-top: 15px;
+  color: #344054;
+}
+
+
+/* BUTTONS */
+
+.analyze-button,
+.report-button {
+  border: none;
+  border-radius: 8px;
+  padding: 13px 24px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.analyze-button {
+  background: #2563eb;
+  color: white;
+}
+
+.analyze-button:hover {
+  background: #1d4ed8;
+}
+
+.analyze-button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+.report-button {
+  background: #101828;
+  color: white;
+}
+
+
+/* ERROR */
+
+.error-card {
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  color: #be123c;
+  padding: 18px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+
+/* RESULTS */
+
+.results {
+  margin-top: 45px;
+}
+
+.results > h2 {
+  margin-bottom: 25px;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.result-card {
+  background: white;
+  border: 1px solid #e4e7ec;
+  border-radius: 12px;
+  padding: 22px;
+}
+
+.label {
+  display: block;
+  color: #667085;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.value {
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+
+/* DETAILS */
+
+.details {
+  display: grid;
+  grid-template-columns:
+    repeat(2, 1fr);
+  gap: 18px;
+}
+
+.details div {
+  background: #f8fafc;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.details span {
+  display: block;
+  color: #667085;
+  font-size: 13px;
+  margin-bottom: 7px;
+}
+
+
+/* PROBABILITIES */
+
+.probability-row {
+  margin-bottom: 20px;
+}
+
+.probability-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7px;
+  text-transform: capitalize;
+}
+
+.progress {
+  width: 100%;
+  height: 10px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #2563eb;
+  border-radius: 10px;
+}
+
+
+/* GUIDANCE */
+
+.guidance-card {
+  background: #fff8e7;
+  border: 1px solid #f4d58d;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 22px;
+}
+
+.guidance-card h3 {
+  margin-top: 0;
+}
+
+.guidance-card p {
+  line-height: 1.7;
+}
+
+
+/* DISCLAIMER */
+
+.disclaimer {
+  background: #f1f5f9;
+  border: 1px solid #dbe2ea;
+  border-radius: 10px;
+  padding: 20px;
+  color: #475467;
+  line-height: 1.6;
+}
+
+.disclaimer p {
+  margin-bottom: 0;
+}
+
+
+/* FOOTER */
+
+.footer {
+  text-align: center;
+  padding: 30px;
+  color: #667085;
+  font-size: 13px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+
+  .result-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .result-grid,
+  .details {
+    grid-template-columns: 1fr;
+  }
+
+}
